@@ -3,9 +3,6 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
-
-
 # The game starts here.
 
 label start:
@@ -16,6 +13,8 @@ label start:
 
     #scene bg room
 
+    
+
     #I made a 'background set up' file, where we can declare background images. In renpy it's a good practice to keep declarations organized on their own type
     scene bg cathedral_A with dissolve #the 'scene' command shows a background image, the 'with dissolve' calls a transition effect
 
@@ -23,7 +22,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy #shows a character sprite
+    # show eileen happy #shows a character sprite
 
     # These display lines of dialogue.
 
@@ -36,16 +35,16 @@ label start:
     #some code stuff needs some python so you have to call it... 
     #I often check the help when I need to do something extra...
     #this name prompt was in the example
-    python:
-        name = renpy.input("What's your name?")
-        name = name.strip() or "Guy Shy" #saves the name into the var or go with a default if the player doesn't input anything
+    # python:
+        # name = renpy.input("What's your name?")
+        # name = name.strip() or "Guy Shy" #saves the name into the var or go with a default if the player doesn't input anything
 
-    define mc = Character ("[name]") #since we are using a variable to define a character, we let this declaration here
-    mc "Today is the day! "
-    
-    
-    narrator "You ponder if you should move forward or go back..."
+    # define mc = Character ("[name]") #since we are using a variable to define a character, we let this declaration here
 
+    narrator "Walking up to the ruined building, you brush aside the vines covering a rusted door. "
+    narrator "With significant effort, you push it open as it creaks loudly. Inside, the air is stale and stagnant; who knows when someone last entered this place."
+    narrator "Light filters through the now-open door, illuminating broken machinery and faded papers."
+    narrator "Each step you take echoes through the lifeless interior, the sound travelling far into the darkness beyond."
     
     #here is a simple choice menu. ident the choices with the choice text, followed by a ' : '
     #the 'jump' command moves the code to the specified 'label' line of code (can also redirect to another rpy file)

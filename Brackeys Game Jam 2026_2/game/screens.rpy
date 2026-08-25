@@ -107,7 +107,9 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        text what id "what"
+        text what id "what":
+            xalign 0.5
+            text_align 0.5
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -208,8 +210,15 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
+        xalign 0.5
+        yalign 0.95
+        spacing 15
+
         for i in items:
-            textbutton i.caption action i.action
+            textbutton i.caption:
+                action i.action
+                xalign 0.5
+                text_align 0.5
 
 
 style choice_vbox is vbox
