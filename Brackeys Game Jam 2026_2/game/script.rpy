@@ -17,6 +17,7 @@ label start:
 
     #I made a 'background set up' file, where we can declare background images. In renpy it's a good practice to keep declarations organized on their own type
     scene bg cathedral_A with dissolve #the 'scene' command shows a background image, the 'with dissolve' calls a transition effect
+    play music "horror_plague.ogg"
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -115,9 +116,16 @@ label start:
     "There is something eerie with this place."
     "You feel watched..."
     "The wind blows hard and you feel a goosebump."
+    stop music fadeout 1
     "It gave you a chill down the spine, but then,... {p}\n you freeze.."
-    "You feel something sharp and cold sliding down your back!"
+
+    play music "behind_heaven.ogg"
     with vpunch
+    pause 1.5
+
+    "You feel something sharp and cold sliding down your back!"
+    
+    pause 1
 
     menu:
             "Stay still":
