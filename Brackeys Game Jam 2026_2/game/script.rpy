@@ -52,9 +52,14 @@ label start:
     #here is a simple choice menu. ident the choices with the choice text, followed by a ' : '
     #the 'jump' command moves the code to the specified 'label' line of code (can also redirect to another rpy file)
     #we should also have files for 'act 1, act 2 and act 3', so the progress is not in one giant block of code
+
+
+
+
     menu:
         "I'm already here, I should go!":
             $ courage_flag = True #turns on a flag switch that we can use later
+            show bg cathedral_A at bg_zoom_in #bg_zoom_in is a custom transition I declared on the 'custom_transitions.rpy'. I'm using 'show' instead of 'scene' because the BG is already drawn on screen
             queue sound [step_grass_a,step_grass_b,step_grass_a] volume 3.0 #queue sounds to play in sequence, volume is multiplier (1 = 100%)
             pause 1.5 #waits to run the code. Pause without time prompts for click
             jump choice_move_forward
@@ -65,6 +70,7 @@ label start:
     label choice_move_forward: #if first choice, executes this code
         scene bg cathedral_B with dissolve
         narrator "The walls are big, but you can see the building behind them"
+        show bg cathedral_B at bg_zoom_in_right
         queue sound [step_grass_a,step_grass_b,step_grass_a] volume 3.0
         pause 1.5
         jump first_choice_done
@@ -88,6 +94,8 @@ label start:
 
         menu:
             "Use the rope you brought to climb":
+                show bg cathedral_C at bg_zoom_in
+                pause 0.5
                 jump choice_climb
 
     label choice_climb:
@@ -111,6 +119,7 @@ label start:
         "It's getting late and you can't even try to climb back."
         "You decide your best option is to get shelter in the building"
         "it's your ONLY option, it seems."
+        show bg cathedral_D at bg_zoom_in
         queue sound [step_grass_a,step_grass_b,step_grass_a] volume 3.0
         pause 1.5
         
@@ -121,6 +130,7 @@ label start:
     "You climb the broken old stairs"
     "Your confidence starts to waver at each unsteady step"
     "The trust on the tip you got to come here now sounds like a scam..."
+    show bg cathedral_E at bg_zoom_in
 
 
     scene bg cathedral_F with dissolve
