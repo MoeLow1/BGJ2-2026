@@ -19,6 +19,8 @@ label start:
     scene bg cathedral_A with dissolve #the 'scene' command shows a background image, the 'with dissolve' calls a transition effect
     play music "horror_plague.ogg"
 
+
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -53,6 +55,8 @@ label start:
     menu:
         "I'm already here, I should go!":
             $ courage_flag = True #turns on a flag switch that we can use later
+            queue sound [step_grass_a,step_grass_b,step_grass_a] volume 3.0 #queue sounds to play in sequence, volume is multiplier (1 = 100%)
+            pause 1.5 #waits to run the code. Pause without time prompts for click
             jump choice_move_forward
         
         "I'm having doubts...":
@@ -61,6 +65,8 @@ label start:
     label choice_move_forward: #if first choice, executes this code
         scene bg cathedral_B with dissolve
         narrator "The walls are big, but you can see the building behind them"
+        queue sound [step_grass_a,step_grass_b,step_grass_a] volume 3.0
+        pause 1.5
         jump first_choice_done
     
     label choice_have_doubts:
@@ -90,6 +96,7 @@ label start:
 
         #I forgot you can call the narrator character without the tag, just text inside a quote
         "As you go down, the rope breaks in the middle"
+        play sound fall_grass volume 4.0
         with vpunch #vertical camera shake
         pause 1.0
         "The loud thud of your fall echoed through the forest"
@@ -97,11 +104,15 @@ label start:
         "\" I shouldn't be here\", you think to yourself" #the \' is to acually use quotes on the dialoge
         "You brush any weird thoughts aside and rush to get back on your feet."
         pause 1.0
+        play sound simple_pain
         "But then the pain comes"
         "\"A sprayed ankle, nice!...\""
+        play sound sigh_a
         "It's getting late and you can't even try to climb back."
         "You decide your best option is to get shelter in the building"
         "it's your ONLY option, it seems."
+        queue sound [step_grass_a,step_grass_b,step_grass_a] volume 3.0
+        pause 1.5
         
 
     scene bg cathedral_E with dissolve
@@ -111,16 +122,28 @@ label start:
     "Your confidence starts to waver at each unsteady step"
     "The trust on the tip you got to come here now sounds like a scam..."
 
+
     scene bg cathedral_F with dissolve
 
     "There is something eerie with this place."
     "You feel watched..."
     "The wind blows hard and you feel a goosebump."
     stop music fadeout 1
-    "It gave you a chill down the spine, but then,... {p}\n you freeze.."
+    
+    "It gave you a chill down the spine, but then,..." #{p}\n you freeze.."
 
     play music "behind_heaven.ogg"
-    with vpunch
+    play audio gasp volume 5.0 #I'm using the audio channel so it can play multiple sounds at the same time here
+    play sound heartbeat_loud loop
+    #play ambience_bgm heartbeat_loud loop
+    
+    #with vpunch
+    $ renpy.transition(vpunch) #I'm not using "with vpunch" here because it hides the dialogue box, so I'm calling the python directly
+    play audio breath_b volume 2.0
+    "...you freeze!"
+    
+    
+    
     pause 1.5
 
     "You feel something sharp and cold sliding down your back!"
@@ -144,6 +167,11 @@ label start:
         scene black with dissolve
         "The previous cold skin now burns with the adrenaline"
         pause 1.0
+        
+        stop ambience_bgm fadeout 1.0
+        stop audio fadeout 1.0 
+        stop sound fadeout 1.0
+        stop music fadeout 1.0
         "then nothing..."
         scene bg cathedral_F with dissolve
         jump end_of_monster_scare
@@ -169,5 +197,6 @@ label start:
     # This ends the game.
 
     label end_of_monster_scare:
+        "This is just so the game doesn't shut down fast"
 
     return
