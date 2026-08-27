@@ -27,8 +27,9 @@ label act_03:
                 "pick up weapon":
                     $ weapon = "silver rifle"
 
-                "leave weapon"
-                $trust +=1
+                "leave weapon":
+                
+                    $ trust+=1
 
 
 

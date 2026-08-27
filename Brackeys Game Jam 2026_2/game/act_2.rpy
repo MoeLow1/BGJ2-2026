@@ -7,9 +7,9 @@ label act_02:
     #region Second Act 
 
 
-    scene bg cathedral_M with dissolve # MoeNote: here we could use one of the bedroom scenes, perferrably a more lit version of the act 1 version
+    scene scene 8_bed wake up with dissolve # MoeNote: here we could use one of the bedroom scenes, perferrably a more lit version of the act 1 version
 
-
+    
     narrator"you sluggishly awake from your rest, still unsure of where you are"
     "the aching in your body now fully realized, the weight of exhaustion clinging on from yesterday"
     "it isnt long before the faint sound of breathing startles you fully awake"
