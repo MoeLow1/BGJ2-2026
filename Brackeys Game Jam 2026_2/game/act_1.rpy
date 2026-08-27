@@ -2,7 +2,8 @@ label act_01:
         
 
     #I made a 'background set up' file, where we can declare background images. In renpy it's a good practice to keep declarations organized on their own type
-    scene bg cathedral_A with dissolve #the 'scene' command shows a background image, the 'with dissolve' calls a transition effect
+    
+    #the 'scene' command shows a background image, the 'with dissolve' calls a transition effect
     
     # play music "horror_plague.ogg"
 
@@ -12,7 +13,7 @@ label act_01:
     #region A1 [wall]
 
 
-
+    scene bg research_a with dissolve
     narrator "You're hanging from a rope, making your way down a colossal wall that guards an abandoned reseach center" 
     narrator "The wall is crumbling and weathered, stained black by years of rain and neglect"
    
@@ -21,6 +22,7 @@ label act_01:
 
     menu:
         "Observe below":
+            scene bg research_b with dissolve 
             narrator "Thick fog and trees make it difficult to see but you can make out the faint outline of a set of industrial buildings"
             "large cilinders poke through the heavy foliage, must be some sort of a power plant"
             "all of it seemingly in no better condition that the wall you are climbing down"
@@ -46,6 +48,7 @@ label act_01:
     
     show layer master at slam_floor
 
+    scene bg cathedral_n with dissolve 
     narrator "It is not long before you slam into the ground, your leg absorbing the impact is now too injured to walk on"
     narrator "exhausted and with nothing better to do. you limp your way to the nearest building in hopes of a place to rest"
     narrator "the silence is haunting. Looking around, you spot a pale light pointied at you from between the trees"
@@ -78,7 +81,9 @@ label act_01:
   
 
     narrator "Walking up to the ruined building, you brush aside the vines covering a rusted door."
+    scene bg cathedral_F with dissolve
     narrator "With significant effort, you push it open as it creaks loudly. Inside, the air is stale and stagnant; who knows when someone last entered this place."
+    scene bg hospital_A with dissolve
     narrator "Light filters through the now-open door, illuminating broken machinery and faded papers."
     narrator "Each step you take echoes through the lifeless interior, the sound travelling far into the darkness beyond."
 
@@ -101,6 +106,7 @@ label act_01:
 
     narrator "You wander through the compound, checking the rooms for a place to rest"
     "it is not too long till you come across a medical ward"
+    scene bg hospital_C with dissolve
     "you drag yourself to the nearest bed, its surface covered in a fine layer of dust"
     "too tierd to wipe it away you accept it as it is and gently lay yourself on it"
     "before shutting your eyes, you make sure to keep your firearm near you, just in case"
