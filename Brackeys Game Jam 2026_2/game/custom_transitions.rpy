@@ -11,3 +11,28 @@ transform bg_zoom_in_right:
     yalign 0.5
     
     ease 2.0 zoom 1.5 xalign 0.7 yalign 0.5 #ease for X seconds the following: makes the zoom 150%, and pivots slight to the right
+
+
+transform slam_floor:
+   
+    subpixel True 
+    
+   
+    linear 0.05 xoffset 10 yoffset -5
+    linear 0.05 xoffset -15 yoffset 10
+    linear 0.05 xoffset 12 yoffset -12
+    linear 0.05 xoffset -8 yoffset 7
+    linear 0.05 xoffset 5 yoffset -4
+    linear 0.05 xoffset -2 yoffset 2
+    
+    
+    linear 0.05 xoffset 0 yoffset 0 
+
+transform weak_vpunch:
+    yoffset 0
+    linear 0.04 yoffset -5
+    linear 0.04 yoffset 5
+    linear 0.04 yoffset -3
+    linear 0.04 yoffset 3
+    linear 0.04 yoffset 0
+
