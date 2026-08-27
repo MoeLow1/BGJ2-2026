@@ -110,7 +110,7 @@ label act_01:
     "you drag yourself to the nearest bed, its surface covered in a fine layer of dust"
     "too tierd to wipe it away you accept it as it is and gently lay yourself on it"
     "before shutting your eyes, you make sure to keep your firearm near you, just in case"
-    "despite creaking of metal and the rough mattress, you sleep through that with ease"
+    "despite creaking of metal and the rough mattress, you shut your eyes...and rest"
 
 
     # MoeNote: transition here of closing eyes to a black screen
@@ -125,6 +125,8 @@ label act_01:
 
     jump act_02
     # jump to the next chapter
+
+
 
 
 

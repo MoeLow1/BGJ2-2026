@@ -7,7 +7,8 @@
 # MoeNote: some extra shakes for more subtle movements
 
 label start:
-
+    default trust = 0
+    default weapon = "standered"
     
     jump act_01
     
