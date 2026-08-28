@@ -13,7 +13,12 @@ label act_01:
     #region A1 [wall]
 
 
-    scene scene 1 wall with dissolve
+    scene scene 1 wall
+    show looping_fog: 
+        yalign 0.0
+    show looping_fog_2: 
+        yalign 0.0
+    with dissolve
     play music unsolved fadein 0.5
     narrator "You're hanging from a rope, making your way down a colossal wall that guards an abandoned reseach center" 
     narrator "The wall is crumbling and weathered, stained black by years of rain and neglect"
@@ -37,14 +42,21 @@ label act_01:
             narrator "Not much is known about this place, locals rumors have it that it was part of a long initiave to find a cure to death"
             "but nothing came out of it and it was quitely discontined, lost to time"
 
-    scene scene 1 wall with dissolve
+    scene scene 1 wall 
+    show looping_fog: 
+        yalign 0.0
+    show looping_fog_2: 
+        yalign 0.0
+    with dissolve
 
     narrator "Nearing the bottom, you feel your rope slowly giving away as one by one the strands begin to flay until"
 
     show layer master at weak_vpunch
     narrator "Snap...the remaining threads fail to carry your weight any longer and you are sent into free fall"
-
-
+    show layer master      at bg_zoom_in_more
+    
+    show black with dissolve
+    pause 1
 
 
 
@@ -54,14 +66,16 @@ label act_01:
 
 
     
-    show layer master at slam_floor
+    
 
     scene scene 2 ground 
+    
     show looping_fog: 
         yalign 0.0
     show looping_fog_2: 
         yalign 0.0
     with dissolve
+    show layer master at slam_floor
     narrator "It is not long before you slam into the ground, your leg absorbing the impact is now too injured to walk on"
     narrator "exhausted and with nothing better to do. you limp your way to the nearest building in hopes of a place to rest"
 
@@ -89,7 +103,7 @@ label act_01:
             hide forest_eyes_withsprite
             hide forest_eyes_one_eye
             with dissolve
-            
+
             "luckly it turns around and fades into the woods"
             "likewise you turn around and continue on"
 
