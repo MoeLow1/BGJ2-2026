@@ -7,10 +7,16 @@ label act_04:
     #region fourth Act 
 
     play music out_of_body fadein 1.0
+
+    # side of door next to pannel shot
     "{b}the beast is also there, impatiantly waiting for you to open the door{/b}"
     "as you get closer to the control pannel the beast makes room for you as a way to encorage you to open the door"
     menu:
         "open the door":
+
+            # open door to field shot
+
+
             $ trust +=1
             "depending unless you have shown no hostility prior, the beast will either attack you after the door is open or leave you be in the full trust ending"
             if trust==2:
@@ -34,6 +40,7 @@ label act_04:
             menu:
 
                 "fire":
+                    # open field 
                     if weapon =="silver rifle":
                         "you steady your aim, the rifle lets out a metallic ring echoing in the open field,a small silver stake embeds itself in the back of the beasts skull, it collapses"
                         "walking past the corpse you sense a foul smell, that of burning flesh, the metalic stake sizzling against the poor creatures skull"
@@ -43,6 +50,7 @@ label act_04:
                         "you steady your aim and hold your breath, a plume of smoke errupts from the gun, the buttet striking the creature in its back, it scrambles to escape only to later then collapes to the ground"
                         "after a breif moment of silence you make your back home, it is a long road"
                         "{b}you are followed home and get killed in the woods{/b}" #beast slayed ending (betrayl)
+
 
 
                 "let it be":

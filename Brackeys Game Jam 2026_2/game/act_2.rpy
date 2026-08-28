@@ -46,8 +46,13 @@ label act_02:
             "a bronze canister is attached to its back, cointainting what could only be blood"
             "torn tubes dangle from the bottom of the canister with blotches clotted blood keeping it shut"
 
+
     narrator "{b}if the player is still alive we continue on with the beast leaving the room{/b}"
+
+        #bedroom door walk out
     "{b}the player walks out of the ward{/b}"
+
+    # a shot of the floor outside it, a screenshot would do
     "{b}on the ground lay vermin violently splattered across the ground that were not there before{/b}"
     "{b}continued description of the dead creatures and the similaritioes with the beast{/b}"
     "{b} untill it is intteruptted with a sound of metal being bashed, repeating becoming more distant as it goes on{/b}"
