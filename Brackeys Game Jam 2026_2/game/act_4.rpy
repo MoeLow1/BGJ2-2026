@@ -6,7 +6,7 @@ label act_04:
 
     #region fourth Act 
 
-    
+    play music out_of_body fadein 1.0
     "{b}the beast is also there, impatiantly waiting for you to open the door{/b}"
     "as you get closer to the control pannel the beast makes room for you as a way to encorage you to open the door"
     menu:

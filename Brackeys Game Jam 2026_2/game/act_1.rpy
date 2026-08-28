@@ -14,6 +14,7 @@ label act_01:
 
 
     scene scene 1 wall with dissolve
+    play music unsolved fadein 0.5
     narrator "You're hanging from a rope, making your way down a colossal wall that guards an abandoned reseach center" 
     narrator "The wall is crumbling and weathered, stained black by years of rain and neglect"
    
@@ -122,8 +123,9 @@ label act_01:
 
 
     # MoeNote: transition here of closing eyes to a black screen
-
+    scene black with dissolve
     pause 3
+    stop music fadeout 1.0
 
     # MoeNote: transition here of closing eyes to a black screen
 

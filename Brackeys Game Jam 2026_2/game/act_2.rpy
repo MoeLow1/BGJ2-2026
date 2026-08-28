@@ -14,6 +14,7 @@ label act_02:
     "the aching in your body now fully realized, the weight of exhaustion clinging on from yesterday"
     "it isnt long before the faint sound of breathing startles you fully awake"
     pause 0.5
+    play music haunted fadein 1.0
     "the beast lays across the room, motionless its eyes fixed on to you"
     pause 0.2
     menu:
