@@ -23,7 +23,11 @@ label act_01:
 
     menu:
         "Observe below":
-            scene bg research_b with dissolve 
+            scene bg research_b 
+            show looping_fog: 
+                yalign 0.5
+            show looping_fog_2 
+            with dissolve
             narrator "Thick fog and trees make it difficult to see but you can make out the faint outline of a set of industrial buildings"
             "large cilinders poke through the heavy foliage, must be some sort of a power plant"
             "all of it seemingly in no better condition that the wall you are climbing down"
@@ -52,18 +56,40 @@ label act_01:
     
     show layer master at slam_floor
 
-    scene scene 2 ground with dissolve 
+    scene scene 2 ground 
+    show looping_fog: 
+        yalign 0.0
+    show looping_fog_2: 
+        yalign 0.0
+    with dissolve
     narrator "It is not long before you slam into the ground, your leg absorbing the impact is now too injured to walk on"
     narrator "exhausted and with nothing better to do. you limp your way to the nearest building in hopes of a place to rest"
 
-    scene scene 3 with dissolve 
-    narrator "the silence is haunting. Looking around, you spot a pale light pointied at you from between the trees"
+    #scene scene 3 with dissolve 
+    scene forest_eyes_bg with dissolve
+    show looping_fog zorder 5: #the z order is so the fog appears above everything
+        yalign 0.0
+        
+    show looping_fog_2 zorder 5: 
+        yalign 0.0
+        
+    narrator "the silence is haunting." 
+    show forest_eyes_one_eye with dissolve #I figured it's best to keep in the scene and just show the sprite on top of the bg, this way the fog keeps playing
+
+    "Looking around, you spot a pale light pointied at you from between the trees"
 
   
     menu:
         "Stare back":
+            show forest_eyes_withsprite with dissolve
+
             narrator "You hold still gazing back carefully at the light, eventually it blinks and moves to reveal another light next to it. these lights do not belong to anything mechanical"
             "its silloute is hard to make out but the potiental size of it alone is enough to make your stomach tighten"
+
+            hide forest_eyes_withsprite
+            hide forest_eyes_one_eye
+            with dissolve
+            
             "luckly it turns around and fades into the woods"
             "likewise you turn around and continue on"
 
