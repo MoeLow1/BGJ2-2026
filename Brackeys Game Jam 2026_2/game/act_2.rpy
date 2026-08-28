@@ -15,19 +15,31 @@ label act_02:
     "it isnt long before the faint sound of breathing startles you fully awake"
     pause 0.5
     play music haunted fadein 1.0
+    show beast idle
     "the beast lays across the room, motionless its eyes fixed on to you"
     pause 0.2
     menu:
         "pull out the gun":
+            show beast fear
             "your arm springs out pointing the barrel towards the head of the beast"
             "it reacts with a mix of fear and frustration hesitantly shifting forward and back, it is familar with the gun"
             "the beast gaze is now fixed on the gun, you need to make a choice"
             menu:
                     "Fire":
+                        show beast shot
                         "the beast swerves anticipating your shot, the bullet landing in its body"
                         "it lets out a blood curdling screech before rushing towards you"
-                        "you rush to line up for another shot but the beast reaches you first, its jaws sunk deep into your guts"
-                        "it is not long before"
+                        
+                        
+                        
+                        "you rush to line up for another shot"
+                        
+                        show layer master at weak_vpunch
+                        hide beast shot
+                        show bitesprite
+                        toptext "but the beast reaches you first, its jaws sunk deep into your guts"
+                        scene black
+                        "it is not long before you bleed out, and you die"
 
                     "Wait":
                         $ trust-=1

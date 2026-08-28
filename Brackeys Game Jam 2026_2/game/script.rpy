@@ -9,7 +9,34 @@
 label start:
     default trust = 0
     default weapon = "standered"
+
+    image beast idle:
+        "idle1"
+        0.5
+        "idle2"
+        0.5
+        "idle3"
+        0.5
+        repeat
+
+    image beast fear:
+        "fear1"
+        0.5
+        "fear2"
+        0.5
+        "fear3"
+        0.5
+        repeat
+
+    image beast shot:
+        "shot1"
+        0.25
+        "shot2"
+        0.25
+        repeat
     
+    define toptext = Character(None, window_yalign=0.0)
+
     jump act_01
     
     # when the project is big, Renpy works best if we split the scenes into different files
