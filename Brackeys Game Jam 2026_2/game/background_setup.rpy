@@ -22,3 +22,24 @@ image bg hospital_G = "images/backgrounds/bg hospital_G.jpg"
 
 image bg research_a = "images/backgrounds/research_a.jpg"
 image bg research_b = "images/backgrounds/research_b.jpg"
+
+image looping_fog:
+    "images/backgrounds/fog.png"
+    xtile 2
+    xanchor 0.0
+    xpos 0.0
+    ypos 1.2
+
+    linear 20.0 xpos -0.5
+    repeat
+
+image looping_fog_2:
+    "images/backgrounds/fog.png"
+    xtile 2
+    xanchor 0.5
+    xpos 0.7
+    ypos 1.0
+    zoom 0.6
+
+    linear 40.0 xpos -0.2
+    repeat

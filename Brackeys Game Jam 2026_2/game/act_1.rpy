@@ -87,10 +87,20 @@ label act_01:
 
   
 
+    
+    scene scene 4 rusted door 
+    show looping_fog 
+    show looping_fog_2 
+    with dissolve
     narrator "Walking up to the ruined building, you brush aside the vines covering a rusted door."
-    scene scene 4 rusted door with dissolve
-    narrator "With significant effort, you push it open as it creaks loudly. Inside, the air is stale and stagnant; who knows when someone last entered this place."
+    
+    show layer master      at bg_zoom_in
+
+
+    queue sound [step_grass_a,step_grass_b,step_grass_a] volume 1.0
+    pause 1.5
     scene scene 5 open door with dissolve
+    narrator "With significant effort, you push it open as it creaks loudly. Inside, the air is stale and stagnant; who knows when someone last entered this place."
     narrator "Light filters through the now-open door, illuminating broken machinery and faded papers."
     narrator "Each step you take echoes through the lifeless interior, the sound travelling far into the darkness beyond."
 
