@@ -24,7 +24,9 @@ label act_02:
     pause 0.2
     menu:
         "pull out the gun":
-            play sound zombie_growl
+            play audio gun_reload_trim
+            pause 0.8
+            play audio zombie_growl
             show beast fear:
                 xpos -0.02
             "your arm springs out pointing the barrel towards the head of the beast"
@@ -32,7 +34,7 @@ label act_02:
             "the beast gaze is now fixed on the gun, you need to make a choice"
             menu:
                     "Fire":
-                        play sound void_scream volume 1.5
+                        play audio void_scream volume 1.5
                         play audio pistol volume 1.5
                         show beast shot:
                             xpos -0.01
@@ -43,13 +45,13 @@ label act_02:
                         "it lets out a blood curdling screech before rushing towards you"
                         
                         
-                        
+                        play audio gun_reload_trim
                         "you rush to line up for another shot"
                         
                         show layer master at weak_vpunch
                         hide beast shot
                         show bitesprite 
-                        play sound alien_beast volume 1.5
+                        play audio alien_beast volume 1.5
                         
                         show layer master at tint_red
                         with flashred
@@ -67,12 +69,12 @@ label act_02:
                     "Wait":
                         $ trust-=1
                         "also leaves"
-                        stop sound fadeout 0.5
+                        stop audio fadeout 0.5
 
                     "Lower the gun":
                         # trust uneffected (cancels out)
                         "leaves"
-                        stop sound fadeout 0.5
+                        stop audio fadeout 0.5
             
 
 
