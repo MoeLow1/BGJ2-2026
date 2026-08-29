@@ -21,9 +21,11 @@ label act_01:
     with dissolve
     play music unsolved fadein 0.5
     play ambience_bgm night_loop fadein 0.5
+    queue sound [rope, rope, rope,]
     narrator "You're hanging from a rope, making your way down a colossal wall that guards an abandoned reseach center" 
+    queue sound [rope, rope, rope,]
     narrator "The wall is crumbling and weathered, stained black by years of rain and neglect"
-   
+    queue sound [rope, rope, rope,]
     narrator "Several hours have passed since you started your descent, Whatever is here must be valuble..."
     "But even then this all seems a little too excessive"
 
@@ -49,13 +51,17 @@ label act_01:
     show looping_fog_2: 
         yalign 0.0
     with dissolve
-
+    queue sound [rope, rope, rope,]
     narrator "Nearing the bottom, you feel your rope slowly giving away as one by one the strands begin to flay until"
 
     show layer master at weak_vpunch
-    play sound gasp
+    play audio gasp volume 2
+    play sound snap
     narrator "Snap...the remaining threads fail to carry your weight any longer and you are sent into free fall"
+    play sound fall_scream
     show layer master      at bg_zoom_in_more
+    pause 1.0
+    stop sound fadeout 2.0
     
     show black with dissolve
     pause 1
@@ -190,6 +196,7 @@ label act_01:
     scene scene 7_hall way2 with dissolve
     "it is not too long till you come across a medical ward"
     "you drag yourself to the nearest bed, its surface covered in a fine layer of dust"
+    play sound making_bed
     "too tierd to wipe it away you accept it as it is and gently lay yourself on it"
     "before shutting your eyes, you make sure to keep your firearm near you, just in case"
     "despite creaking of metal and the rough mattress, you shut your eyes...and rest"

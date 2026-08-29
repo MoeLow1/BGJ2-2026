@@ -33,6 +33,7 @@ label act_02:
             menu:
                     "Fire":
                         play sound void_scream volume 1.5
+                        play audio pistol volume 1.5
                         show beast shot:
                             xpos -0.01
                         
@@ -49,11 +50,14 @@ label act_02:
                         hide beast shot
                         show bitesprite 
                         play sound alien_beast volume 1.5
-                        with flashred
-                        with flashred
-                        show layer master at tint_red
-                        toptext "but the beast reaches you first, its jaws sunk deep into your guts"
                         
+                        show layer master at tint_red
+                        with flashred
+                        with flashred
+                        play audio bite_flesh volume 1.5
+                        with vpunch
+                        toptext "but the beast reaches you first, its jaws sunk deep into your guts"
+                        play sound death
                         scene black with dissolve
                         "it is not long before you bleed out, and you die"
                         stop sound fadeout 0.5
