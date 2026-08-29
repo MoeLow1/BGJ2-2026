@@ -20,8 +20,13 @@ image bg hospital_E = "images/backgrounds/bg hospital_E.jpg"
 image bg hospital_F = "images/backgrounds/bg hospital_F.jpg"
 image bg hospital_G = "images/backgrounds/bg hospital_G.jpg"
 
+image bedroom_door_out = "images/backgrounds/bedroom_door_out.png"
+image vermin_floor = "images/backgrounds/vermin_floor.png"
+
 image bg research_a = "images/backgrounds/research_a.jpg"
 image bg research_b = "images/backgrounds/research_b.jpg"
+
+image game_over_title = "images/backgrounds/game_over_title.png"
 
 image looping_fog:
     "images/backgrounds/fog.png"

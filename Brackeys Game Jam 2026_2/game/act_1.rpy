@@ -11,7 +11,7 @@ label act_01:
 
 
     #region A1 [wall]
-
+    
 
     scene scene 1 wall
     show looping_fog: 
@@ -20,6 +20,7 @@ label act_01:
         yalign 0.0
     with dissolve
     play music unsolved fadein 0.5
+    play ambience_bgm night_loop fadein 0.5
     narrator "You're hanging from a rope, making your way down a colossal wall that guards an abandoned reseach center" 
     narrator "The wall is crumbling and weathered, stained black by years of rain and neglect"
    
@@ -52,6 +53,7 @@ label act_01:
     narrator "Nearing the bottom, you feel your rope slowly giving away as one by one the strands begin to flay until"
 
     show layer master at weak_vpunch
+    play sound gasp
     narrator "Snap...the remaining threads fail to carry your weight any longer and you are sent into free fall"
     show layer master      at bg_zoom_in_more
     
@@ -75,9 +77,15 @@ label act_01:
     show looping_fog_2: 
         yalign 0.0
     with dissolve
+    play sound fall_grass volume 4.0
+    play audio simple_pain
     show layer master at slam_floor
     narrator "It is not long before you slam into the ground, your leg absorbing the impact is now too injured to walk on"
     narrator "exhausted and with nothing better to do. you limp your way to the nearest building in hopes of a place to rest"
+
+    show layer master at bg_zoom_in_right
+    queue sound [step_grass_a,step_grass_b,step_grass_a] volume 3.0
+    pause 1.5
 
     #scene scene 3 with dissolve 
     scene forest_eyes_bg with dissolve
@@ -96,6 +104,7 @@ label act_01:
     menu:
         "Stare back":
             show forest_eyes_withsprite with dissolve
+            play sound heartbeat
 
             narrator "You hold still gazing back carefully at the light, eventually it blinks and moves to reveal another light next to it. these lights do not belong to anything mechanical"
             "its silloute is hard to make out but the potiental size of it alone is enough to make your stomach tighten"
@@ -103,14 +112,19 @@ label act_01:
             hide forest_eyes_withsprite
             hide forest_eyes_one_eye
             with dissolve
+            stop sound fadeout 0.5
 
             "luckly it turns around and fades into the woods"
             "likewise you turn around and continue on"
+            queue sound [step_grass_a,step_grass_b,step_grass_a] volume 1.0
+            pause 1.5
 
         "Move along":
 
             narrator "Best to focus on finding a shelter first"  # MoeNote: could use some more words here
             "wasting no time you press on"
+            queue sound [step_grass_a,step_grass_b,step_grass_a] volume 1.0
+            pause 1.5
 
 
 
@@ -132,6 +146,7 @@ label act_01:
     show looping_fog 
     show looping_fog_2 
     with dissolve
+
     narrator "Walking up to the ruined building, you brush aside the vines covering a rusted door."
     
     show layer master      at bg_zoom_in
@@ -139,8 +154,13 @@ label act_01:
 
     queue sound [step_grass_a,step_grass_b,step_grass_a] volume 1.0
     pause 1.5
+    "With significant effort, you push it open as it creaks loudly."
+    play sound effort_a
     scene scene 5 open door with dissolve
-    narrator "With significant effort, you push it open as it creaks loudly. Inside, the air is stale and stagnant; who knows when someone last entered this place."
+    stop ambience_bgm fadeout 0.5
+    
+    #play ambience_bgm hollow_corridor fadein 0.5 volume 0.5
+    narrator  "Inside, the air is stale and stagnant; who knows when someone last entered this place."
     narrator "Light filters through the now-open door, illuminating broken machinery and faded papers."
     narrator "Each step you take echoes through the lifeless interior, the sound travelling far into the darkness beyond."
 
@@ -163,6 +183,9 @@ label act_01:
 
     scene scene 6_hall way with dissolve
     narrator "You wander through the compound, checking the rooms for a place to rest"
+    show layer master at bg_zoom_in
+    queue sound [step_grass_a,step_grass_b,step_grass_a] volume 3.0
+    pause 1.5
 
     scene scene 7_hall way2 with dissolve
     "it is not too long till you come across a medical ward"
