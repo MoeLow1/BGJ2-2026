@@ -37,7 +37,8 @@ label start:
     
     define toptext = Character(None, window_yalign=0.0)
 
-    jump act_01
+    jump wp_act_01
+    #jump act_01
     
     # when the project is big, Renpy works best if we split the scenes into different files
     # I made an act_1 and act_2 files and we navigate through them through the 'jump / label' statements

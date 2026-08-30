@@ -328,7 +328,8 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        #textbutton _("About") action ShowMenu("about")
+        textbutton _("Credits") action Start(label = "credit_scene")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
