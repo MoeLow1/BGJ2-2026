@@ -11,7 +11,7 @@ scene gate_closed with dissolve
 "the beast there, impatiently waiting for you to open the door"
 show beast idle
 "next to the pannel lies a partially melted key"
-"as you get closer to the control pannel the beast backs off giving you some space, inviting you to open the door"
+"as you get closer to the control pannel, the beast backs off giving you some space, inviting you to open the door"
 menu:
     "open the door":
         scene gate_open with dissolve
@@ -20,7 +20,7 @@ menu:
         
         if trust>=2:
             "The door begins to creak open, its jittering as it struggles to open for the first time in many years"
-            "the beast sits patiently waiting for the rusted door to finish opening before moving out, dragging its bloated body behind"
+            "the beast sits patiently, waiting for the rusted door to finish opening before moving out, dragging its bloated body behind"
             "You wait a while till its fully out of view, and you are on your way home"
             "Its a long path but you make it back, The stolen goods sell well"
             show beast idle at bg_zoom_out
@@ -43,9 +43,9 @@ menu:
             play audio bite_flesh volume 1.5
             
             with vpunch
-            "Before you can turn around the beast lunges at jaw open taking sinking its jaws into your guts"
+            "Before you can turn around, the beast lunges at jaw open taking sinking its jaws into your guts"
             play sound death
-            "A sudden shock of cold spreads across the wound, radiating to your legs and chest, you collapse to the floor soon after"
+            "A sudden shock of cold spreads across the wound, radiating to your legs and chest.\nyou collapse to the floor soon after"
             hide bitesprite with dissolve
             scene black with dissolve
             stop audio

@@ -7,7 +7,7 @@ label act_03:
     #region Thrid Act 
 
     # antoher shot of the hallway
-    narrator "making your way through the hallway all the doors have been bashed shut, a labyrinth of a complex now reduced to a single path"
+    narrator "making your way through the hallway all the doors have been bashed shut.\na labyrinth of a complex now reduced to a single path"
     "The interior is overgrown with vines, winding through every place where light seeps in through the cracks."
     "Curiously, you eventually come across an open room"
 
@@ -32,6 +32,8 @@ label act_03:
     menu:
         "Take weapon":
             scene riffle_lab_shot_bg with dissolve
+            play audio gun_reload_trim
+            pause 0.8
             $ weapon = "silver rifle"
             $ trust -= 1
 

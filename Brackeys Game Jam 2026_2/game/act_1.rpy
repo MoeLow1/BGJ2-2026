@@ -1,4 +1,5 @@
-effectlabel act_01:
+#effect
+label act_01:
         
 
     #I made a 'background set up' file, where we can declare background images. In renpy it's a good practice to keep declarations organized on their own type
@@ -37,8 +38,8 @@ effectlabel act_01:
                 yalign 0.5
             show looping_fog_2 
             with dissolve
-            narrator "Thick fog and trees make it difficult to see but you can make out the faint outline of a set of industrial buildings"
-            "large cylinders poke through the heavy foliage, must be some sort of a power plant"
+            narrator "Thick fog and trees make it difficult to see, but you can make out the faint outline of a set of industrial buildings"
+            "Large cylinders poke through the heavy foliage,\nmust be some sort of a power plant"
             "all of it seemingly in no better condition than the wall you are climbing down"
             
 

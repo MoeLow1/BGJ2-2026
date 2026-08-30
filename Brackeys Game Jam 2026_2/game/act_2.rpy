@@ -34,7 +34,7 @@ label act_02:
             show beast fear:
                 xpos -0.02
             "Your arm springs out pointing the barrel towards the head of the beast"
-            "It reacts with a mix of fear and frustration hesitantly shifting forward and back, it is familiar with the gun"
+            "It reacts with a mix of fear and frustration, hesitantly shifting forward and back,\nit is familiar with the gun"
             "The beast gaze is now fixed on the gun, you need to make a choice"
             menu:
                     "Fire":
@@ -51,8 +51,8 @@ label act_02:
                         
                         "the beast swerves anticipating your shot, the bullet landing in its body"
                         "it lets out a blood curdling screech before rushing towards you"
-                        "The beast swerves anticipating your shot, the bullet landing in its body"
-                        "It lets out a blood curdling screech before rushing towards you"
+                        # "The beast swerves anticipating your shot, the bullet landing in its body"
+                        # "It lets out a blood curdling screech before rushing towards you"
                         
                         
                         play audio gun_reload_trim
@@ -126,14 +126,14 @@ label act_02:
             "Inspect it":
                 "The dead vermon seems to share a much in common with the beast"
                 "Its body lies bloated and swollen, its eyes faintly glowing beneath a dark coat of fur."
-                "Yet, unlike the beast, its form appears somewhat more natural. Patches of its body remain untouched, retaining the creature's original appearance."
+                "Yet, unlike the beast, its form appears somewhat more natural. \nPatches of its body remain untouched, retaining the creature's original appearance."
 
 
             "Touch it":
                 show rat jaw
                 show layer master at weak_vpunch
                 "Your hand recoils instinctively, fingers curling as a sharp chill races through them"
-                "As you clench your hand in pain you notice the decapitated rat's head being to subtly twitch"
+                "As you clench your hand in pain, you notice the decapitated rat's head being to subtly twitch"
                 "its jaws opening and closing in an eerie way, as it struggles to move towards you"
 
                 
