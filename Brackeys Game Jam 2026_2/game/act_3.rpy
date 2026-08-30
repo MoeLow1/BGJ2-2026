@@ -7,40 +7,36 @@ label act_03:
     #region Thrid Act 
 
     # antoher shot of the hallway
-    narrator "{b}making your way through the hall all the doors apear to be bashed shut a labrynth of a complex reduced to a single path{/b}"
-    "{b}leaving you with a narrow path to go through{/b}"
-    "{b}you tred through the hallways overgrown by floar walls with faded paint and plants positioned sprouting where cracks of light apear{/b}"
-    "{b} two doors apear to be untouched almost as though they were forgotten{/b}"
+    narrator "making your way through the hallway all the doors have been bashed shut, a labrynth of a complex now reduced to a single path"
+    "The interior is overgrown with vines, winding through every place where light seeps in through the cracks."
+    "Curiously, you eventually come across an open room"
 
     # and antoher shot of the hallway with 2 doors visable
+
+    "Cruel looking tools are scattered across the floor, violently broken apart."
+
+    "Dead mice lay in glass containers, many of them malformed."
+
+    "You pillage the room, bagging anything that looks expensive."
+
+    "Looking at the desks are littered with pages, a certain paper catches your eye."
+
+    call screen scp_document
+
+    "Outside the room, sounds breathing and impatient footsteps can be heard"
+    "You feel like that it is wise to wrap this up"
+
+    "Skimming over the shelves, you find an odd looking rifle, loaded with a small silver stake, too large to fit your bag"
+
     menu:
+        "Take weapon":
+            $ weapon = "silver rifle"
+            $ trust -= 1
+
+        "Leave weapon":
+            $ trust += 1
+
+
+    "At the end of the path you come across the main door, closed shut with a control pad next to it"
     
-        "left door (research room)":
-            #a room with desks and papers of some sort
-            "{b}give the player more insight via some research papers, talks about the creature and the general perpose{/b}"
-            "interrupted by a loud bashing of the other door so close that you can feel the ringing in your ears"
-            "more info is given, behavoir, traits etc...mentioning the intelligence of the creature and how it emr"
-
-        "right door (equipment )":
-            #a room with more tools or equipment laying around cathederal miiiiiight work here
-            "{b}gives more insight into the experements that took place, the original containment of the creature and other experments that took place{/b}"
-            "interrupted again by a loud bashing of the other door so close that you can feel the ringing in your ears"
-            "many broken painful looking tools can be found broken, a broken container hosting some dead testing rodents and looking through the cabins a weapon can be found with a silver bullet"
-
-            menu: 
-                "pick up weapon":
-                    $ weapon = "silver rifle"
-
-                "leave weapon":
-                
-                    $ trust+=1
-
-
-    #hall way out
-    "{b} the player leaves the room to find the other one shut, with nothing better to do you move on{/b}"
-
-
-    #a heavy door perferably with a control pannel near it
-    "{b}at the end of the path you come across another door, locked with a control pad next to it{/b}"
-   
     jump act_04

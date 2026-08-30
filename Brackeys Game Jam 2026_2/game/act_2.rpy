@@ -10,9 +10,9 @@ label act_02:
     scene scene 8_bed wake up with dissolve # MoeNote: here we could use one of the bedroom scenes, perferrably a more lit version of the act 1 version
     play ambience_bgm hollow_corridor fadein 1 volume 0.2
     
-    narrator"you sluggishly awake from your rest, still unsure of where you are"
-    "the aching in your body now fully realized, the weight of exhaustion clinging on from yesterday"
-    "it isnt long before the faint sound of breathing startles you fully awake"
+    narrator" You sluggishly awake from your rest, still unsure of where you are"
+    "The aching in your body now fully realized, the weight of exhaustion clinging on from yesterday"
+    "It isnt long before the faint sound of breathing startles you fully awake"
     pause 0.5
     play music haunted fadein 1.0
     play audio whispers
@@ -20,22 +20,26 @@ label act_02:
     show beast idle:
         xpos -0.01 #offset, so the paw aligns with the BG
     with flashwhite #custom transition
-    "the beast lays across the room, motionless its eyes fixed on to you"
+    "The beast lays across the room, motionless its eyes fixed on to you"
     pause 0.2
+
     menu:
-        "pull out the gun":
+      
+        "Pull out the gun":
             play audio gun_reload_trim
             pause 0.8
             play audio zombie_growl
+            play sound zombie_growl
             show beast fear:
                 xpos -0.02
-            "your arm springs out pointing the barrel towards the head of the beast"
-            "it reacts with a mix of fear and frustration hesitantly shifting forward and back, it is familar with the gun"
-            "the beast gaze is now fixed on the gun, you need to make a choice"
+            "Your arm springs out pointing the barrel towards the head of the beast"
+            "It reacts with a mix of fear and frustration hesitantly shifting forward and back, it is familar with the gun"
+            "The beast gaze is now fixed on the gun, you need to make a choice"
             menu:
                     "Fire":
                         play audio void_scream volume 1.5
                         play audio pistol volume 1.5
+                        play sound void_scream volume 1
                         show beast shot:
                             xpos -0.01
                         
@@ -43,61 +47,90 @@ label act_02:
                         
                         "the beast swerves anticipating your shot, the bullet landing in its body"
                         "it lets out a blood curdling screech before rushing towards you"
+                        "The beast swerves anticipating your shot, the bullet landing in its body"
+                        "It lets out a blood curdling screech before rushing towards you"
                         
                         
                         play audio gun_reload_trim
-                        "you rush to line up for another shot"
+                        
+                        "You rush to line up for another shot"
                         
                         show layer master at weak_vpunch
                         hide beast shot
                         show bitesprite 
                         play audio alien_beast volume 1.5
-                        
                         show layer master at tint_red
+                        play sound alien_beast volume 1
                         with flashred
                         with flashred
                         play audio bite_flesh volume 1.5
                         with vpunch
                         toptext "but the beast reaches you first, its jaws sunk deep into your guts"
                         play sound death
+                        show layer master at tint_red
+                        toptext "But the beast reaches you first, its jaws sunk deep into your guts"
+                        
                         scene black with dissolve
-                        "it is not long before you bleed out, and you die"
+                        "It is not long before you bleed out, and you die"
                         stop sound fadeout 0.5
                         
                         jump game_over
 
                     "Wait":
                         $ trust-=1
-                        "also leaves"
                         stop audio fadeout 0.5
+                        "The beasts eyes dart between your hands the door as it awkardly moves towards the exit, its back pressed against the wall"
+                        "Upon readching the door it rushes out, and you are left alone"
+                        stop sound fadeout 0.5
 
                     "Lower the gun":
                         # trust uneffected (cancels out)
-                        "leaves"
                         stop audio fadeout 0.5
+                        $ trust+=1
+                        "it takes a while but the beast calms down, still weary of your hands it slowly moves towards the door before bolting out"
+                        stop sound fadeout 0.5
             
 
 
         "stay put":
             $ trust+=1
             
-            "you hold your breath and try to calm down"
+            "you steady your breathing and try to calm down"
             "it's fur is a pitch black tone and it's eyes and mouth emitting a faint light"
-            "a bronze canister is attached to its back, cointainting what could only be blood"
-            "torn tubes dangle from the bottom of the canister with blotches clotted blood keeping it shut"
+            "a crude metal canister is attached to its back, cointainting what could only be blood"
+            "torn tubes dangle from the bottom of the canister with lumps of clotted blood keeping it shut"
             stop sound fadeout 0.5
 
+            "A miniute passes and the beast calmly makes its way out of the door"
 
-    narrator "{b}if the player is still alive we continue on with the beast leaving the room{/b}"
+
+    scene bedroom_door_out with dissolve
+    narrator "Feeling homesick already, you haul yourself of the bed and leave in search for an exit"
 
     #bedroom door walk out
-    scene bedroom_door_out with dissolve
-    "{b}the player walks out of the ward{/b}"
+    "As you are making your way out you notice something odd on the floor"
 
     # a shot of the floor outside it, a screenshot would do
     scene vermin_floor with dissolve
-    "{b}on the ground lay vermin violently splattered across the ground that were not there before{/b}"
-    "{b}continued description of the dead creatures and the similaritioes with the beast{/b}"
-    "{b} untill it is intteruptted with a sound of metal being bashed, repeating becoming more distant as it goes on{/b}"
+    "On the ground, vermin lay violently splattered and torn on the ground, they were not there before"
+
+    scene vermin_floor2 with dissolve
+    menu:
+            "Inspect it":
+                "The dead vermon seems to share a much in common with the beast"
+                "Its body lies bloated and swollen, its eyes faintly glowing beneath a dark coat of fur."
+                "Yet, unlike the beast, its form appears somewhat more natural. Patches of its body remain untouched, retaining the creature's original appearance."
+
+
+            "Touch it":
+                show layer master at weak_vpunch
+                "Your hand recoils instinctively, Fingers curling as a sharp chill races through them"
+                "As you clench your hand in pain you notice the decapitated rat's head being to subtly twitch"
+                "its jaws opening and closing in an eerie way, as it struggles to move towards you"
+
+                
+    show layer master at weak_vpunch
+    "Your train of thought is intterrupted by a loud sound of calttering metal, with each crash becoming more and more distant"
+    "You feel like its a good idea to move along"
 
     jump act_03

@@ -6,6 +6,52 @@
 # The game starts here.
 # MoeNote: some extra shakes for more subtle movements
 
+
+screen scp_document():
+
+    tag menu
+
+    frame:
+        xalign 0.5
+        yalign 0.5
+        xsize 1100
+        ysize 800
+
+        viewport:
+            scrollbars "vertical"
+            mousewheel True
+            draggable True
+
+            vbox:
+                spacing 20
+
+                
+                
+                text "" size 32
+                text "  Test Subject: No. 1" size 32
+                
+
+                text "   No. 1 is a large, wolf-like creature of unknown origin. No. 1 possesses an unnatural capacity for regeneration and endurance, allowing it to withstand remarkable levels of physical trauma. Given sufficient time, No. 1 is capable of recovering from nearly any injury. Notably, its blood naturally maintains an extremely low temperature, comparable to that of liquid helium."
+
+                text "  Experiments" size 28
+                text "   Attempts to make No. 1's blood compatible with test mice have been unsuccessful. Exposure consistently results in severe deformities, extreme hostility, and the complete loss of higher cognitive function. Attempts to dilute the blood to reduce its dominance have likewise proven unsuccessful."
+
+
+                text "  ADDENDUM 1" size 28
+                text "   No. 1 appears to possess a photographic memory and demonstrates long-term recognition of individuals who have subjected it to painful experimentation. Even after prolonged periods of separation, the subject has been observed to react with immediate fear and hostility upon encountering such individuals."
+
+                text "  ADDENDUM 2" size 28
+                text "   Silver appears to be the only substance capable of inflicting permanent injuries upon No. 1, burning painfully into No. 1's flesh, preventing the subject from regenerating the affected tissue, requiring amputation if any recovery is to be made"
+                
+                textbutton "CLOSE":
+                    action Return()
+                    xalign 0.5
+
+                textbutton "CLOSE":
+                    action Return()
+                    xalign 0.5
+
+                    
 label start:
     default trust = 0
     default weapon = "standered"
