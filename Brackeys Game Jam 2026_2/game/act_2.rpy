@@ -12,7 +12,7 @@ label act_02:
     
     narrator" You sluggishly awake from your rest, still unsure of where you are"
     "The aching in your body now fully realized, the weight of exhaustion clinging on from yesterday"
-    "It isnt long before the faint sound of breathing startles you fully awake"
+    "It isn't long before the faint sound of breathing startle you fully awake"
     pause 0.5
     play music haunted fadein 1.0
     play audio whispers
@@ -34,7 +34,7 @@ label act_02:
             show beast fear:
                 xpos -0.02
             "Your arm springs out pointing the barrel towards the head of the beast"
-            "It reacts with a mix of fear and frustration hesitantly shifting forward and back, it is familar with the gun"
+            "It reacts with a mix of fear and frustration hesitantly shifting forward and back, it is familiar with the gun"
             "The beast gaze is now fixed on the gun, you need to make a choice"
             menu:
                     "Fire":
@@ -84,8 +84,8 @@ label act_02:
                     "Wait":
                         $ trust-=1
                         stop audio fadeout 0.5
-                        "The beasts eyes dart between your hands the door as it awkardly moves towards the exit, its back pressed against the wall"
-                        "Upon readching the door it rushes out, and you are left alone"
+                        "The beast's eyes dart between your hands the door as it awkwardly moves towards the exit, its back pressed against the wall"
+                        "Upon reaching the door it rushes out, and you are left alone"
                         stop sound fadeout 0.5
                         hide handgun_aim
 
@@ -103,12 +103,12 @@ label act_02:
             $ trust+=1
             
             "you steady your breathing and try to calm down"
-            "it's fur is a pitch black tone and it's eyes and mouth emitting a faint light"
-            "a crude metal canister is attached to its back, cointainting what could only be blood"
+            "its fur is a pitch black tone and its eyes and mouth emitting a faint light"
+            "a crude metal canister is attached to its back, containing what could only be blood"
             "torn tubes dangle from the bottom of the canister with lumps of clotted blood keeping it shut"
             stop sound fadeout 0.5
 
-            "A miniute passes and the beast calmly makes its way out of the door"
+            "A minute passes and the beast calmly makes its way out off the door"
 
 
     scene bedroom_door_out with dissolve
@@ -132,7 +132,7 @@ label act_02:
             "Touch it":
                 show rat jaw
                 show layer master at weak_vpunch
-                "Your hand recoils instinctively, Fingers curling as a sharp chill races through them"
+                "Your hand recoils instinctively, fingers curling as a sharp chill races through them"
                 "As you clench your hand in pain you notice the decapitated rat's head being to subtly twitch"
                 "its jaws opening and closing in an eerie way, as it struggles to move towards you"
 
@@ -145,8 +145,8 @@ label act_02:
     play audio doorbash volume 0.4
     pause 0.75
     play audio doorbash volume 0.2
-    "Your train of thought is intterrupted by a loud sound of calttering metal, with each crash becoming more and more distant"
-    "You feel like its a good idea to move along"
+    "Your train of thought is interrupted by a loud sound of clattering metal, with each crash becoming more and more distant"
+    "You feel like it's a good idea to move along"
     scene scene 7_hall way2 with dissolve
 
     jump act_03

@@ -1,4 +1,4 @@
-label act_01:
+effectlabel act_01:
         
 
     #I made a 'background set up' file, where we can declare background images. In renpy it's a good practice to keep declarations organized on their own type
@@ -22,12 +22,12 @@ label act_01:
     play music unsolved fadein 0.5
     play ambience_bgm night_loop fadein 0.5
    
-    narrator "You're hanging from a rope, making your way down a colossal wall that guards an abandoned reseach center" 
+    narrator "You're hanging from a rope, making your way down a colossal wall that guards an abandoned research center" 
    
     narrator "The wall is crumbling and weathered, stained black by years of rain and neglect"
     
    
-    narrator "Several hours have passed since you started your descent, Whatever is here must be valuble..."
+    narrator "Several hours have passed since you started your descent, Whatever is here must be valuable..."
     "But even then this all seems a little too excessive"
 
     menu:
@@ -38,13 +38,13 @@ label act_01:
             show looping_fog_2 
             with dissolve
             narrator "Thick fog and trees make it difficult to see but you can make out the faint outline of a set of industrial buildings"
-            "large cilinders poke through the heavy foliage, must be some sort of a power plant"
-            "all of it seemingly in no better condition that the wall you are climbing down"
+            "large cylinders poke through the heavy foliage, must be some sort of a power plant"
+            "all of it seemingly in no better condition than the wall you are climbing down"
             
 
         "What is this place?":
-            narrator "Not much is known about this place, locals rumors have it that it was part of a long initiave to find a cure to death"
-            "but nothing came out of it and it was quitely discontined, lost to time"
+            narrator "Not much is known about this place, locals rumors have it that it was part of a long initiative to find a cure to death"
+            "but nothing came out of it and it was quitely discontinued, lost to time"
 
     scene scene 1 wall 
     show looping_fog: 
@@ -54,7 +54,7 @@ label act_01:
     with dissolve
     queue sound [rope]
 
-    narrator "Nearing the bottom, you feel your rope slowly giving away as one by one the strands begin to flay until"
+    narrator "Nearing the bottom, you feel your rope slowly giving away as one by one the strands begin to fray until"
 
     show layer master at weak_vpunch
     play audio gasp volume 2
@@ -106,7 +106,7 @@ label act_01:
     narrator "the silence is haunting." 
     show forest_eyes_one_eye with dissolve #I figured it's best to keep in the scene and just show the sprite on top of the bg, this way the fog keeps playing
 
-    "Looking around, you spot a pale light pointied at you from between the trees"
+    "Looking around, you spot a pale light pointed at you from between the trees"
 
   
     menu:
@@ -115,14 +115,14 @@ label act_01:
             play sound heartbeat
 
             narrator "You hold still gazing back carefully at the light, eventually it blinks and moves to reveal another light next to it. these lights do not belong to anything mechanical"
-            "its silloute is hard to make out but the potiental size of it alone is enough to make your stomach tighten"
+            "its silhouette is hard to make out but the potential size of it alone is enough to make your stomach tighten"
 
             hide forest_eyes_withsprite
             hide forest_eyes_one_eye
             with dissolve
             stop sound fadeout 0.5
 
-            "luckly it turns around and fades into the woods"
+            "luckily it turns around and fades into the woods"
             "likewise you turn around and continue on"
             queue sound [step_grass_a,step_grass_b,step_grass_a] volume 1.0
             pause 1.5
@@ -203,7 +203,7 @@ label act_01:
     scene beds2 with dissolve
     "you drag yourself to the nearest bed, its surface covered in a fine layer of dust"
     play sound making_bed
-    "too tierd to wipe it away you accept it as it is and gently lay yourself on it"
+    "too tired to wipe it away you accept it as it is and gently lay yourself on it"
     "before shutting your eyes, you make sure to keep your firearm near you, just in case"
     "despite creaking of metal and the rough mattress, you shut your eyes...and rest"
 

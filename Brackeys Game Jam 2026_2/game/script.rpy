@@ -100,6 +100,17 @@ label start:
       
       
         repeat
+
+
+    image beast dead:
+        "dead1"
+        0.75
+        "dead2"
+        0.75
+ 
+      
+      
+        repeat
     
     define toptext = Character(None, window_yalign=0.0)
 
