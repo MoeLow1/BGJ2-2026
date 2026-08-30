@@ -26,6 +26,7 @@ label act_02:
     menu:
       
         "Pull out the gun":
+            show handgun_aim
             play audio gun_reload_trim
             pause 0.8
             play audio zombie_growl
@@ -37,6 +38,9 @@ label act_02:
             "The beast gaze is now fixed on the gun, you need to make a choice"
             menu:
                     "Fire":
+                        hide handgun_aim
+                        
+                        show handgun_fire
                         play audio void_scream volume 1.5
                         play audio pistol volume 1.5
                         play sound void_scream volume 1
@@ -58,6 +62,7 @@ label act_02:
                         show layer master at weak_vpunch
                         hide beast shot
                         show bitesprite 
+                        hide handgun_fire
                         play audio alien_beast volume 1.5
                         show layer master at tint_red
                         play sound alien_beast volume 1
@@ -82,8 +87,10 @@ label act_02:
                         "The beasts eyes dart between your hands the door as it awkardly moves towards the exit, its back pressed against the wall"
                         "Upon readching the door it rushes out, and you are left alone"
                         stop sound fadeout 0.5
+                        hide handgun_aim
 
                     "Lower the gun":
+                        hide handgun_aim
                         # trust uneffected (cancels out)
                         stop audio fadeout 0.5
                         $ trust+=1
@@ -113,8 +120,8 @@ label act_02:
     # a shot of the floor outside it, a screenshot would do
     scene vermin_floor with dissolve
     "On the ground, vermin lay violently splattered and torn on the ground, they were not there before"
-
     scene vermin_floor2 with dissolve
+    show rat idle
     menu:
             "Inspect it":
                 "The dead vermon seems to share a much in common with the beast"
@@ -123,6 +130,7 @@ label act_02:
 
 
             "Touch it":
+                show rat jaw
                 show layer master at weak_vpunch
                 "Your hand recoils instinctively, Fingers curling as a sharp chill races through them"
                 "As you clench your hand in pain you notice the decapitated rat's head being to subtly twitch"
@@ -130,7 +138,15 @@ label act_02:
 
                 
     show layer master at weak_vpunch
+    play audio doorbash volume 0.8
+    pause 0.75
+    play audio doorbash volume 0.6
+    pause 0.3
+    play audio doorbash volume 0.4
+    pause 0.75
+    play audio doorbash volume 0.2
     "Your train of thought is intterrupted by a loud sound of calttering metal, with each crash becoming more and more distant"
     "You feel like its a good idea to move along"
+    scene scene 7_hall way2 with dissolve
 
     jump act_03

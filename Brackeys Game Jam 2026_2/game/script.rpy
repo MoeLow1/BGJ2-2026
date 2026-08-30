@@ -80,6 +80,26 @@ label start:
         "shot2"
         0.25
         repeat
+
+    
+    image rat idle:
+        "rat1"
+        0.5
+        "rat2"
+        0.5
+      
+        repeat
+    
+    image rat jaw:
+        "ratjaw1"
+        0.5
+        "ratjaw2"
+        0.5
+        "ratjaw3"
+        0.5
+      
+      
+        repeat
     
     define toptext = Character(None, window_yalign=0.0)
 

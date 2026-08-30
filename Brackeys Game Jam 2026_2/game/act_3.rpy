@@ -20,7 +20,7 @@ label act_03:
     "You pillage the room, bagging anything that looks expensive."
 
     "Looking at the desks are littered with pages, a certain paper catches your eye."
-
+    play sound page volume 3
     call screen scp_document
 
     "Outside the room, sounds breathing and impatient footsteps can be heard"
