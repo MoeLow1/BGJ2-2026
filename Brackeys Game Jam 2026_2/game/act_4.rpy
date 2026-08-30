@@ -9,7 +9,7 @@ label act_04:
     play music out_of_body fadein 1.0
 
     # side of door next to pannel shot
-    "{b}the beast is also there, impatiantly waiting for you to open the door{/b}"
+    "the beast is also there, impatiantly waiting for you to open the door"
     "next to the pannel lies a partially melted key"
     "as you get closer to the control pannel the beast backs off giving you some space, inviting you to open the door"
     menu:
@@ -48,17 +48,18 @@ label act_04:
                         "You steady your aim, the rifle lets out a metallic ring echoing in the open field, a small silver stake embeds itself in the back of the beasts skull, it collapses"
                         "Walking past the corpse you sense a foul smell, that of burning flesh, the metalic stake sizzling against the poor creatures skull"
                         "You can't wait to get home and wash your hands of this whole situation" #beast slayed ending (betrayl)
+                        jump slay_beast_ending
 
                     elif weapon =="standered":
                         "a plume of smoke errupts from the gun, the bullet striking the creature in its back, it scrambles to escape only to later then collapes to the ground"
                         "after a breif moment of silence you make your back home, it is a long road"
-                        "It is a long way home, you are followed home and get killed in the woods}" #beast slayed ending (betrayl)
-
+                        "It is a long way home, you are followed home and get killed in the woods" #beast slayed ending (betrayl)
+                        jump game_over
 
 
                 "let it be":
                     "it everntaully forces its way through, "
                     "after arriving back you wake up to hear that a nearby village has been ravaged from an unknown creature, making its way to other towns"
-                    jump SemiTrustEnding
+                    jump SEMI_TRUST_ENDING
 
     # jump act_04
